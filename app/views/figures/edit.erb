@@ -1,14 +1,14 @@
 <form action="/figures/<%= @figure.id %>" method="POST">
-  
+  <!-- Figure Name -->
+  <label>Name</label>
+  <input type="text" name="figure[name]" id="figure_name"> </br>    
 
   <!-- Submit Edit Figure Form -->
-  <input type="submit" value="Submit Edit">  
+  <input type="submit" value="Edit Figure">  
 </form>
 
 <form action="/figures" method="POST">
-  <!-- Figure Name -->
-  <label>Name</label>
-  <input type="text" name="figure[name]" id="figure_name"> </br>  
+
   
   <!-- Titles, print them with checkbox -->
   <label>Title(s)</label>
@@ -31,7 +31,4 @@
   <input type="text" name="landmark[name]" id="new_landmark"></br>
   <label>Year Landmark was completed</label>
   <input type="text" name="landmark[year_completed]"></br>
-  
-  <!-- Submit Figure Form -->
-  <input type="submit" value="Create New Figure">
 </form>
