@@ -9,6 +9,12 @@
     <label><%= title.name %></label>
     <input type="checkbox" name="figure[title_ids][]" id="title_<%=title.id%>" value="<%= title.id %>"> </br>
   <% end %>
+  
+  <!-- Landmarks, print them with checkbox -->
+  <% Landmark.all.each do |landmark| %>
+    <label><%= landmark.name %></label>
+    <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=landmark.id%>" value="<%= landmark.id %>"> </br>
+  <% end %>
 
   <!-- Submit Edit Figure Form -->
   <input type="submit" value="Edit Figure">  
@@ -22,11 +28,7 @@
   <label>Create a Title</label>
   <input type="text" name="title[name]" id="new_title"> </br>
   
-  <!-- Landmarks, print them with checkbox -->
-  <% Landmark.all.each do |landmark| %>
-    <label><%= landmark.name %></label>
-    <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=landmark.id%>" value="<%= landmark.id %>"> </br>
-  <% end %>
+
   <!-- Create Landmark -->
   <label>Create a Landmark</label></br>
   <label>Landmark Name</label>
