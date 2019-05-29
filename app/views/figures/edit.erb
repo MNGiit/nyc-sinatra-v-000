@@ -1,11 +1,14 @@
 <form action="/figures/<%= @figure.id %>" method="POST">
-  <!-- Figure Name -->
+  <!-- Edit Figure Name -->
   <label>Name</label>
-  <input type="text" name="figure[name]" id="figure_name"> </br>    
+  <input type="text" name="figure[name]" id="figure_name" value="<%= @figure.name %>"> </br>    
 
   <!-- Submit Edit Figure Form -->
   <input type="submit" value="Edit Figure">  
 </form>
+
+  <label>Name</label>
+  <input type="text" id="figure_name" name="figure[name]" value="<%= @figure.name%>"><br></br>
 
 <form action="/figures" method="POST">
 
