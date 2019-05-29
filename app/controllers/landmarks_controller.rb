@@ -28,4 +28,5 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/edit'
   end
   
+  patch '/landmarks/'
 end
