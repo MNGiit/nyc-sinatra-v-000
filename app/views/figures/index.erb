@@ -1,12 +1,3 @@
 <% @figures.each do |figure| %>
   <a href="/figures/<%= figure.id %>"><%= figure.name %></a>
 <% end %>
-
-
-    <% @figures.each do |figure| %>
-      <td align="center"><a href="/figures/<%= figure.id %>"><%= figure.name %></a>
-      <ul>
-        <%figure.titles.each do |title|%>
-        <li><%=title.name%></li>
-        <%end%>
-      </ul>
